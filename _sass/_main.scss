@@ -465,8 +465,8 @@ h6,
 .h6 {
   font-weight: $main_text_weight;
   color: $title_text_color;
-  line-height: 1.5;
-  margin: 1rem 0 1rem;
+  line-height: 1.4;
+  margin: 1.5rem 0 0.6rem;
 }
 
 //
@@ -483,7 +483,7 @@ p + h5,
 p + .h5,
 p + h6,
 p + .h6 {
-  margin: 1em 0 1rem;
+  margin: 1.8rem 0 0.6rem;
 }
 
 .social-icons {
@@ -538,27 +538,27 @@ p + .h6 {
 
   .h1,
   h1 {
-    font-size: 3.250rem;
+    font-size: 2.4rem;
   }
 
   .h2,
   h2 {
-    font-size: 2.298rem;
+    font-size: 1.75rem;
   }
 
   .h3,
   h3 {
-    font-size: 1.625rem;
+    font-size: 1.35rem;
   }
 
   .h4,
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 
   .p,
   p {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .p,
@@ -566,11 +566,11 @@ p + .h6 {
   li {
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .small {
@@ -612,7 +612,7 @@ p + .h6 {
 
   .p,
   p {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
   }
 
   .p,
@@ -620,11 +620,11 @@ p + .h6 {
   li {
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   p.post-meta {
@@ -633,22 +633,22 @@ p + .h6 {
 
   .h1,
   h1 {
-    font-size: 2.827rem;
+    font-size: 2.0rem;
   }
 
   .h2,
   h2 {
-    font-size: 1.999rem;
+    font-size: 1.5rem;
   }
 
   .h3,
   h3 {
-    font-size: 1.413rem;
+    font-size: 1.25rem;
   }
 
   .h4,
   h4 {
-    font-size: 1.22rem;
+    font-size: 1.1rem;
   }
 
   .site-header {

@@ -66,10 +66,10 @@ None of the combinations worked (same results on macOS 15.5 and 26.3.1):
 
 | Controller | Attachment | Target | Result |
 |-----------|-----------|--------|--------|
-| `VZNVMExpressController` | `VZDiskBlockDeviceAttachment` | /dev/rdisk0s5 | ❌ vm.start() crashes |
-| `VZNVMExpressController` | `VZDiskImageAttachment` | /dev/rdisk0s5 | ❌ Controller present, no namespace |
-| `VZNVMExpressController` | `VZDiskImageAttachment` | /dev/disk0s5 | ❌ Controller present, no namespace |
-| `VZNVMExpressController` | `VZDiskImageAttachment` | Regular file | ✅ Works |
+| NVMe | `VZDiskBlockDeviceAttachment` | /dev/rdisk0s5 | ❌ vm.start() crashes |
+| NVMe | `VZDiskImageAttachment` | /dev/rdisk0s5 | ❌ Controller present, no namespace |
+| NVMe | `VZDiskImageAttachment` | /dev/disk0s5 | ❌ Controller present, no namespace |
+| NVMe | `VZDiskImageAttachment` | Regular file | ✅ Works |
 
 > In macOS, `/dev/disk0s5` is a buffered block device (goes through system cache), while `/dev/rdisk0s5` is a raw character device (bypasses cache for direct access). Both point to the same physical partition but differ in I/O path. Performance tests typically use `rdisk` to avoid cache interference.
 
@@ -157,10 +157,10 @@ This API is designed for compatibility (booting more Linux kernels), not perform
 
 | Controller               | Attachment                    | 目标            | 结果                 |
 | ------------------------ | ----------------------------- | ------------- | ------------------ |
-| `VZNVMExpressController` | `VZDiskBlockDeviceAttachment` | /dev/rdisk0s5 | ❌ vm.start() 崩溃    |
-| `VZNVMExpressController` | `VZDiskImageAttachment`       | /dev/rdisk0s5 | ❌ 有控制器，无 namespace |
-| `VZNVMExpressController` | `VZDiskImageAttachment`       | /dev/disk0s5  | ❌ 有控制器，无 namespace |
-| `VZNVMExpressController` | `VZDiskImageAttachment`       | 普通文件          | ✅ 正常工作             |
+| NVMe | `VZDiskBlockDeviceAttachment` | /dev/rdisk0s5 | ❌ vm.start() 崩溃    |
+| NVMe | `VZDiskImageAttachment`       | /dev/rdisk0s5 | ❌ 有控制器，无 namespace |
+| NVMe | `VZDiskImageAttachment`       | /dev/disk0s5  | ❌ 有控制器，无 namespace |
+| NVMe | `VZDiskImageAttachment`       | 普通文件          | ✅ 正常工作             |
 
 > macOS 中 `/dev/disk0s5` 是 buffered 块设备（经过系统缓存），`/dev/rdisk0s5` 是 raw 字符设备（绕过缓存直接访问）。两者指向同一物理分区，只是 I/O 路径不同。性能测试一般用 `rdisk` 避免缓存干扰。
 

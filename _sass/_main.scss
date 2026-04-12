@@ -173,48 +173,48 @@ body {
 }
 
 /*
-  Table styles copied from Bootstrap
-  Copyright (c) 2013 Twitter, Inc
+  Table styles
 */
 
 table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 1.5;
-  font-size: 1.125rem;
-  // Cells
+  margin-bottom: 1.6rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  border-collapse: collapse;
+  border-spacing: 0;
+
   > thead,
   > tbody,
   > tfoot {
     > tr {
       > th,
       > td {
-        padding: 12px;
-        line-height: 1.2;
+        padding: 0.6em 0.8em;
         vertical-align: top;
-        border-top: 1px solid #333;
+        border-bottom: 1px solid #e8e8e8;
+        text-align: left;
       }
     }
   }
-  // Bottom align for column headings
+
   > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #333;
+    font-weight: 600;
+    color: $title_text_color;
+    border-bottom: 2px solid #ddd;
   }
-  // Remove top border from thead by default
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
+
+  > tbody > tr:last-child > td {
+    border-bottom: none;
   }
-  // Account for multiple tbody instances
+
+  > tbody > tr:hover {
+    background-color: #fafafa;
+  }
+
   > tbody + tbody {
-    border-top: 2px solid #333;
+    border-top: 2px solid #ddd;
   }
 }
 
@@ -578,7 +578,7 @@ p + .h6 {
   }
 
   table {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .post-link .post-title {

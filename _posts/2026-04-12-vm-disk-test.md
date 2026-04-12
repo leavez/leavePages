@@ -87,8 +87,16 @@ In practice, the community mostly uses it to work around a different issue: Virt
 
 This API is designed for compatibility (booting more Linux kernels), not performance. It only works with file-backed images and cannot be used for physical device passthrough.
 
+
+<br />
+<br />
+
 ---
 
+<br />
+<br />
+
+(文章由 AI 辅助生成)
 
 磁盘性能是 macOS VM 的主要瓶颈。这篇文章测了三种配置下的实际表现，并且讨论了一下 NVMe 直通。
 

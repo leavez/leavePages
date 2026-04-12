@@ -46,6 +46,12 @@ p {
   word-break: break-word;
 }
 
+ul, ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5em;
+}
+
 a {
   text-decoration: none;
   color: $main_tint_color; //#FF8CB0;
@@ -200,9 +206,9 @@ table {
   }
 
   > thead > tr > th {
-    font-weight: 600;
+    font-weight: $main_text_weight;
     color: $title_text_color;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 
   > tbody > tr:last-child > td {
@@ -246,6 +252,7 @@ table {
 
 .post-header h3 {
   color: $main_tint_color ; // #FF8CB0;
+  font-size: 1.8rem;
 }
 
 .post-footer {
@@ -452,9 +459,21 @@ p.post-summary {
 }
 
 h1,
-.h1,
+.h1 {
+  font-weight: $main_text_weight;
+  color: $title_text_color;
+  line-height: 1.4;
+  margin: 2.2rem 0 0.6rem;
+}
+
 h2,
-.h2,
+.h2 {
+  font-weight: $main_text_weight;
+  color: $title_text_color;
+  line-height: 1.4;
+  margin: 2.0rem 0 0.6rem;
+}
+
 h3,
 .h3,
 h4,
@@ -472,9 +491,15 @@ h6,
 //
 
 p + h1,
-p + .h1,
+p + .h1 {
+  margin: 2.5rem 0 0.6rem;
+}
+
 p + h2,
-p + .h2,
+p + .h2 {
+  margin: 2.2rem 0 0.6rem;
+}
+
 p + h3,
 p + .h3,
 p + h4,
@@ -570,7 +595,7 @@ p + .h6 {
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .small {
@@ -624,7 +649,7 @@ p + .h6 {
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
   p.post-meta {

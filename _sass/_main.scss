@@ -416,7 +416,12 @@ p code {
 pre {
   font-size: 0.9rem;
   line-height: 1.4;
-  overflow-x: scroll;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   padding: 0.5rem 1rem;
   margin-bottom: 0.88em;
   border-radius: 2px;

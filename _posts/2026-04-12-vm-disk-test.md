@@ -49,9 +49,7 @@ Three configurations:
 Notable findings:
 
 * **seq write 1M**: Virtio Raw hits 2x the Host throughput. The macOS Virtio driver aggressively coalesces large writes, achieving higher effective concurrency than Host posixaio at iodepth=4.
-
 * **rand write 4K**: The largest gap between Raw and File. Raw slightly exceeds Host, while File drops to 39% — APFS Copy-on-Write requires extra block allocation, metadata updates, and journaling on every random write.
-
 * **seq write/read 4K**: Raw and File are nearly identical (~38-42K IOPS), indicating the bottleneck is the macOS Virtio driver itself — roughly a **40K IOPS ceiling**, regardless of backend.
 
 ## NVMe Virtual Controller: Not Working
@@ -103,13 +101,9 @@ This API is designed for compatibility (booting more Linux kernels), not perform
 ## 测试环境
 
 * M1 Pro / 32GB / Apple SSD 2TB / macOS 15.5
-
 * 测试分区：disk0s5 (994.6GB)，未挂载，直接操作 `/dev/rdisk0s5`
-
 * Guest：macOS 15.6.1，6 vCPU / 8GB RAM
-
 * fio 3.42，`direct=1`，`ioengine=posixaio`
-
 * 4K 测试 `iodepth=32`，1M 测试 `iodepth=4`
 
 三种配置：
@@ -140,9 +134,7 @@ This API is designed for compatibility (booting more Linux kernels), not perform
 几点关注：
 
 * **seq write 1M**：Virtio Raw 跑到 Host 的 2 倍。macOS Virtio 驱动对大块写入做了激进的合并，实际并发度高于 Host posixaio 在 iodepth=4 时的表现。
-
 * **rand write 4K**：Raw 直通略超 Host，而 File 只有 Host 的 39%，性能差距最大。
-
 * **seq write/read 4K**：Raw 和 File 几乎一样（~38-42K IOPS），说明瓶颈在 macOS Virtio 驱动层，约 **40K IOPS 天花板**，与后端无关。
 
 ## NVMe Virtual Controller：直通物理设备不可用

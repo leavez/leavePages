@@ -52,6 +52,14 @@ ul, ol {
   padding-left: 1.5em;
 }
 
+li > p {
+  margin-bottom: 0.2rem;
+}
+
+li > p:last-child {
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
   color: $main_tint_color; //#FF8CB0;

@@ -9,7 +9,7 @@ date:       2026-7-5
 
 ---
 
-> Written by AI, supervised by a human.
+> Written by AI, supervised by myself
 
 A follow-up to [Disk Passthrough Performance in Apple Virtualization.framework]({% post_url 2026-04-12-vm-disk-test %}). Same question, newer OS.
 
